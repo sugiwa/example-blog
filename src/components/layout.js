@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
@@ -26,22 +26,42 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer style={{
-          marginTop: `2rem`
-        }}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+      <div>
+        <main>
+          <div className='mainBlock'>
+            <div className='mainFrame'>
+              <div className='mainArticle'>
+                {children}
+              </div>
+            </div>
+          </div>
+          <div className='subBlock'>
+            <div className='subFrame'>
+              <h2>人気記事</h2>
+              <ol>
+                <li><Link to='/article/example'>example</Link></li>
+                <li><Link to='/article/example2'>example2</Link></li>
+                <li><Link to='/article/example3'>example3</Link></li>
+                <li><Link to='/article/example4'>example4</Link></li>
+                <li><Link to='/article/example5'>example5</Link></li>
+              </ol>
+            </div>
+            <div className='subFrame'>
+              <h2>最新記事</h2>
+              <ol>
+                <li><Link to='/article/example5'>example5</Link></li>
+                <li><Link to='/article/example4'>example4</Link></li>
+                <li><Link to='/article/example3'>example3</Link></li>
+                <li><Link to='/article/example2'>example2</Link></li>
+                <li><Link to='/article/example'>example</Link></li>
+              </ol>
+            </div>
+          </div>
+        </main>
       </div>
+      <footer>
+        © {new Date().getFullYear()}, Example
+      </footer>
     </>
   )
 }

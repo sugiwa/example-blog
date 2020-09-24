@@ -590,8 +590,91 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
+
+
+main{
+  display: flex;
+}
+.mainBlock{
+  width: 70%;
+}
+.mainFrame{
+  width: 95%;
+  margin: 0 auto 20px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.mainArticle{
+  width: 90%;
+  padding: 50px 0;
+  margin: 0 auto;
+}
+.subBlock{
+  width: 30%;
+}
+.subFrame{
+  width: 95%;
+  padding: 0 0 20px;
+  margin: 0 auto 50px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.subFrame h2{
+  width: 80%;
+  font-size: 2rem;
+  padding: 20px 0 0;
+  text-align: center;
+  margin: 0 auto 20px;
+  border-bottom: 1px solid;
+}
+.subFrame ol{
+  width: 70%;
+  margin: 0 auto;
+}
+.subFrame li{
+  font-size: 1.2rem;
+}
+.subFrame a{
+  color: #000000;
+  text-decoration: none;
+}
+.subFrame a:hover{
+  border-bottom: 1px solid;
+}
+
+footer{
+  height: 100px;
+  color: #ffffff;
+  background-color: #000000;
+  text-align: center;
+  line-height: 100px;
+}
+
+@media screen and (max-width:1024px){
+  main{
+    flex-direction: column;
+  }
+  .mainBlock{
+    width: 100%;
+  }
+  .subBlock{
+    width: 100%;
+    margin: 50px 0 0;
+  }
+  footer{
+    margin-bottom: 95px;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .mainBlock{
+    width: 100%;
+  }
+  .subBlock{
+    width: 100%;
+    margin: 50px 0 0;
+  }
+  footer{
+    margin-bottom: 65px;
   }
 }

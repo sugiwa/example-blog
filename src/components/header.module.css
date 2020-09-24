@@ -1,0 +1,94 @@
+.header{
+    width: 100%;
+    height: 120px;
+    background-color: #000000;
+    margin-bottom: 1.45rem;
+    display: flex;
+}
+.headerBlock{
+    width: 70%;
+    margin: 0;
+    max-width: 700px;
+    line-height: 100%;
+
+}
+.title{
+    margin: 0;
+    text-align: center;
+    line-height: 120px;
+}
+.titleLink{
+    color: #ffffff;
+    text-decoration: none;
+}
+.nav{
+    width: 600px;
+    padding: 0 auto;
+    margin: 0 30px 0 100px;
+}
+.menuList{
+    padding:10px;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.menu{
+    padding: 30px 40px 0;
+}
+.menuLink{
+    font-size: 200%;
+    color: #ffffff;
+    text-decoration: none;
+}
+.menuLink:hover{
+    color: red;
+}
+
+@media screen and (max-width: 1024px){
+    .headerBlock{
+        margin: 0 auto;
+    }
+    .nav{
+        width: 100%;
+        height: 100px;
+        margin: initial;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: #000000;
+        z-index: 10;
+    }
+    .menuList{
+        margin: 0 3% 3%;
+    }
+    .menu{
+        font-size: 120%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .headerBlock{
+        margin: 0 auto;
+    }
+    .nav{
+        width: 100%;
+        height: 70px;
+        margin: initial;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        background-color: #000000;
+        z-index: 10;
+    }
+    .menuList{
+        margin:  3%;
+    }
+    .menu{
+        font-size: 80%;
+        padding: 0;
+        margin: 0;
+    }
+    .menuLink{
+    }
+}
